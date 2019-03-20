@@ -13,7 +13,6 @@ class Pokemon
   
   def self.find(id, db)
     x = db.execute("SELECT * FROM pokemon WHERE id = ?", id)
-    #binding.pry
     Pokemon.new(x[0][0],x[0][1],x[0][2])
   end
 
